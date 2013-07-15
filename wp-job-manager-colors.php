@@ -20,13 +20,13 @@ final class WP_Job_Manager_Colors {
 	public static function instance() {
 		if ( ! isset ( self::$instance ) ) {
 			self::$instance = new self;
-			self::$instance->setup_actions();
 		}
 
 		return self::$instance;
 	}
 
 	public function __construct() {
+		$this->setup_actions();
 		$this->terms = get_terms( 'job_listing_type', array( 'hide_empty' => false ) );
 	}
 
