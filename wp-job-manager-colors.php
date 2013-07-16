@@ -47,12 +47,25 @@ final class WP_Job_Manager_Colors {
 	private function create_options() {
 		$options = array();
 
+		$options[] = array(
+			'name' 		  => 'job_manager_job_type_what_color',
+			'std' 		  => 'background',
+			'placeholder' => '',
+			'label' 	  => __( 'What', 'job_manager_colors' ),
+			'desc'        => __( 'Should these colors the the text color, or background color?', 'job_manager_colors' ),
+			'type'        => 'select',
+			'options'     => array(
+				'background' => __( 'Background', 'job_manager_colors' ),
+				'text'       => __( 'Text', 'job_manager_colors' )
+			)
+		);
+
 		foreach ( $this->terms as $term ) {
 			$options[] = array(
 				'name' 		  => 'job_manager_job_type_' . $term->slug . '_color',
 				'std' 		  => '',
 				'placeholder' => '#',
-				'label' 	  => $term->name,
+				'label' 	  => '<strong>' . $term->name . '</strong>',
 				'desc'		  => __( 'Hex value for the color of this job type.', 'job_manager_colors' )
 			);
 		}
@@ -64,7 +77,9 @@ final class WP_Job_Manager_Colors {
 		echo "<style id='job_manager_colors'>\n";
 
 		foreach ( $this->terms as $term ) {
-			printf( ".job-type.%s { background-color: %s; } \n", $term->slug, get_option( 'job_manager_job_type_' . $term->slug . '_color', '#fff' ) );
+			$what = 'background' == get_option( 'job_manager_job_type_what_color' ) ? 'background-color' : 'color';
+
+			printf( ".job-type.%s { %s: %s; } \n", $term->slug, $what, get_option( 'job_manager_job_type_' . $term->slug . '_color', '#fff' ) );
 		}
 
 		echo "</style>\n";
