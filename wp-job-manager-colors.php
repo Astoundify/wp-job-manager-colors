@@ -15,8 +15,6 @@ final class WP_Job_Manager_Colors {
 
 	private static $instance;
 
-	private $terms;
-
 	public static function instance() {
 		if ( ! isset ( self::$instance ) ) {
 			self::$instance = new self;
@@ -27,7 +25,6 @@ final class WP_Job_Manager_Colors {
 
 	public function __construct() {
 		$this->setup_actions();
-		$this->terms = get_terms( 'job_listing_type', array( 'hide_empty' => false ) );
 	}
 
 	private function setup_actions() {
@@ -45,6 +42,7 @@ final class WP_Job_Manager_Colors {
 	}
 
 	private function create_options() {
+		$terms   = get_terms( 'job_listing_type', array( 'hide_empty' => false ) );
 		$options = array();
 
 		$options[] = array(
@@ -74,9 +72,11 @@ final class WP_Job_Manager_Colors {
 	}
 
 	function output_colors() {
+		$terms   = get_terms( 'job_listing_type', array( 'hide_empty' => false ) );
+
 		echo "<style id='job_manager_colors'>\n";
 
-		foreach ( $this->terms as $term ) {
+		foreach ( $terms as $term ) {
 			$what = 'background' == get_option( 'job_manager_job_type_what_color' ) ? 'background-color' : 'color';
 
 			printf( ".job-type.%s { %s: %s; } \n", $term->slug, $what, get_option( 'job_manager_job_type_' . $term->slug . '_color', '#fff' ) );
