@@ -58,7 +58,7 @@ final class WP_Job_Manager_Colors {
 			)
 		);
 
-		foreach ( $this->terms as $term ) {
+		foreach ( $terms as $term ) {
 			$options[] = array(
 				'name' 		  => 'job_manager_job_type_' . $term->slug . '_color',
 				'std' 		  => '',
