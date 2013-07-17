@@ -50,7 +50,7 @@ final class WP_Job_Manager_Colors {
 			'std' 		  => 'background',
 			'placeholder' => '',
 			'label' 	  => __( 'What', 'job_manager_colors' ),
-			'desc'        => __( 'Should these colors be applied to the the text color, or background color?', 'job_manager_colors' ),
+			'desc'        => __( 'Should these colors be applied to the text color, or background color?', 'job_manager_colors' ),
 			'type'        => 'select',
 			'options'     => array(
 				'background' => __( 'Background', 'job_manager_colors' ),
