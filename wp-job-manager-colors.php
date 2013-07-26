@@ -3,9 +3,10 @@
  * Plugin Name: Job Type Colors for WP Job Manager 
  * Plugin URI:  https://github.com/astoundify/wp-job-manager-colors
  * Description: Assign custom colors for each existing job type.
- * Author:      Spencer Finnell
- * Author URI:  http://spencerfinnell.com
+ * Author:      Astoundify
+ * Author URI:  http://astoundify.com
  * Version:     1.0
+ * Text Domain: job_manager_colors
  */
 
 // Exit if accessed directly
