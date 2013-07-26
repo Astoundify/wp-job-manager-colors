@@ -26,6 +26,6 @@ Select the color of each existing job type in the Job Listings' settings. Can se
 
 == Changelog ==
 
-= 0.1: July 26, 2013 =
+= 1.0: July 26, 2013 =
 
-* First official alpha release!
+* First official release!
