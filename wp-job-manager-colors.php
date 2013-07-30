@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Job Type Colors for WP Job Manager 
+ * Plugin Name: WP Job Manager - Job Type Colors 
  * Plugin URI:  https://github.com/astoundify/wp-job-manager-colors
  * Description: Assign custom colors for each existing job type.
  * Author:      Astoundify

@@ -17,6 +17,10 @@ Change a job type's color without editing CSS.
 
 Select the color of each existing job type in the Job Listings' settings. Can set the color to be the background color, or text color.
 
+= Where can I use this? =
+
+Astoundify has released the first fully integrated WP Job Manager theme. Check out ["Jobify"](http://themeforest.net/item/jobify-job-board-wordpress-theme/5247604?ref=Astoundify)
+
 == Installation ==
 
 1. Install and Activate
