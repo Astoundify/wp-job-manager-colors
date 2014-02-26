@@ -66,7 +66,7 @@ class WP_Job_Manager_Colors {
 
 		foreach ( $terms as $term ) {
 			$options[] = array(
-				'name' 		  => 'job_manager_job_type_' . $term->term_id . '_color',
+				'name' 		  => 'job_manager_job_type_' . $term->slug . '_color',
 				'std' 		  => '',
 				'placeholder' => '#',
 				'label' 	  => '<strong>' . $term->name . '</strong>',
@@ -89,7 +89,7 @@ class WP_Job_Manager_Colors {
 		foreach ( $terms as $term ) {
 			$what = 'background' == get_option( 'job_manager_job_type_what_color' ) ? 'background-color' : 'color';
 
-			printf( ".job-type.term-%s, .job-type.%s { %s: %s; } \n", $term->term_id, $term->slug, $what, get_option( 'job_manager_job_type_' . $term->term_id . '_color', '#fff' ) );
+			printf( ".job-type.term-%s, .job-type.%s { %s: %s; } \n", $term->term_id, $term->slug, $what, get_option( 'job_manager_job_type_' . $term->slug . '_color', '#fff' ) );
 		}
 
 		echo "</style>\n";
