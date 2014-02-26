@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: WP Job Manager - Job Type Colors 
+ * Plugin Name: WP Job Manager - Job Type Colors
  * Plugin URI:  https://github.com/astoundify/wp-job-manager-colors
  * Description: Assign custom colors for each existing job type.
  * Author:      Astoundify
  * Author URI:  http://astoundify.com
- * Version:     1.0
+ * Version:     1.0.1
  * Text Domain: job_manager_colors
  */
 
@@ -66,7 +66,7 @@ class WP_Job_Manager_Colors {
 
 		foreach ( $terms as $term ) {
 			$options[] = array(
-				'name' 		  => 'job_manager_job_type_' . $term->slug . '_color',
+				'name' 		  => 'job_manager_job_type_' . $term->term_id . '_color',
 				'std' 		  => '',
 				'placeholder' => '#',
 				'label' 	  => '<strong>' . $term->name . '</strong>',
@@ -89,7 +89,7 @@ class WP_Job_Manager_Colors {
 		foreach ( $terms as $term ) {
 			$what = 'background' == get_option( 'job_manager_job_type_what_color' ) ? 'background-color' : 'color';
 
-			printf( ".job-type.%s { %s: %s; } \n", $term->slug, $what, get_option( 'job_manager_job_type_' . $term->slug . '_color', '#fff' ) );
+			printf( ".job-type.term-%s, .job-type.%s { %s: %s; } \n", $term->term_id, $term->slug, $what, get_option( 'job_manager_job_type_' . $term->term_id . '_color', '#fff' ) );
 		}
 
 		echo "</style>\n";
@@ -97,7 +97,7 @@ class WP_Job_Manager_Colors {
 
 	public function colorpickers( $hook ) {
 		$screen = get_current_screen();
-		
+
 		if ( 'job_listing_page_job-manager-settings' != $screen->id )
 			return;
 
@@ -107,7 +107,7 @@ class WP_Job_Manager_Colors {
 
 	public function colorpickersjs() {
 		$screen = get_current_screen();
-		
+
 		if ( 'job_listing_page_job-manager-settings' != $screen->id )
 			return;
 		?>

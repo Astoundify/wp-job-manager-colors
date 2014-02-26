@@ -7,7 +7,7 @@ Contributors: SpencerFinnell
 Tags: job, job listing, job region
 Requires at least: 3.5
 Tested up to: 3.5
-Stable Tag: 1.0
+Stable Tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,6 +30,10 @@ Astoundify has released the first fully integrated WP Job Manager theme. Check o
 
 == Changelog ==
 
-= 1.0: July 26, 2013 =
+= 1.0.1: February 26, 2014 =
+
+* Output the term ID for non-latin languages.
+
+= 1.0.0: July 26, 2013 =
 
 * First official release!
