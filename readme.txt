@@ -60,7 +60,7 @@ If you like this plugin, consider exploring our other themes and plugins:
 * Fix settings title issue.
 * Fix undefine object value error.
 * Compatibility check with WordPress v6.0.1
-* Compatibility check with latest WP Job Manager v6.0.1
+* Compatibility check with latest WP Job Manager v1.37.0
 
 = 1.0.3: May 10, 2022 =
 
