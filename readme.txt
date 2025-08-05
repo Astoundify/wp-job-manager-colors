@@ -6,8 +6,8 @@ Donate link: https://www.paypal.me/astoundify
 Contributors: Astoundify
 Tags: job, job listing, job region
 Requires at least: 4.4 
-Tested up to: 6.0.1
-Stable Tag: 1.0.4
+Tested up to: 6.8
+Stable Tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,6 +54,12 @@ If you like this plugin, consider exploring our other themes and plugins:
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.0.5: August 6th, 2025 =
+
+* Fixed Vulnerability issue.
+* Compatibility check with WordPress v6.8.1
+* Compatibility check with latest WP Job Manager v2.4.0
 
 = 1.0.4: July 20, 2022 =
 
